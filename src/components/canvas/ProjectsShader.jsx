@@ -185,7 +185,7 @@ const ProjectsShader = () => {
                     material-toneMapped={false}
                     anchorX='center'
                     anchorY='middle'
-                    onClick={() => handleClick(url)}
+                    onClick={() => handleClick('/portfolio')}
                     onPointerEnter={(e) => {
                       document.body.style.cursor = 'pointer';
                     }}
