@@ -65,6 +65,8 @@ const ProjectsShader = () => {
     window.open(url, '_blank')
   }
 
+  const texture = useLoader(TextureLoader, '/img/projects/user-placeholder.png');
+
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true)
@@ -134,7 +136,6 @@ const ProjectsShader = () => {
             />
 
             {images.map((image, i) => {
-              const texture = useLoader(TextureLoader, '/img/projects/user-placeholder.png');
               const { position, src, title, url, desc } = image
 
               return (

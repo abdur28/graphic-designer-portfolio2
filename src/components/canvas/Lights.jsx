@@ -54,4 +54,6 @@ const Lights = forwardRef((props, ref) => {
   );
 });
 
+Lights.displayName = 'Lights';
+
 export default Lights;
