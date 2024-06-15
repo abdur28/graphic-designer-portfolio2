@@ -9,14 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
+    "@react-three/cannon": "^6.6.0",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
+    "framer-motion": "^11.2.10",
+    "next": "14.2.4",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-icons": "^5.2.1",
+    "react-parallax-tilt": "^1.7.228",
+    "react-vertical-timeline-component": "^3.6.0",
+    "sass": "^1.77.5",
+    "three": "^0.165.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "glslify-loader": "^2.0.0",
+    "postcss": "^8",
+    "raw-loader": "^4.0.2",
+    "tailwindcss": "^3.4.1"
   }
 }

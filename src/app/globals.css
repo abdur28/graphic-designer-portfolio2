@@ -1,33 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  html,
+  body,
+  #__next {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+
+  body {
+    background-color: #050505;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'FogtwoNo5';
+  src: url(/fogtwoNo5.otf);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.hover-effect {
+  cursor: pointer;
+  position: relative;
+}
+
+.hover-effect:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  display: block;
+  right: 0;
+  background: white;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  
+  .bg {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    background: rgb(170, 170, 170);
+    
+
+    .links {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        font-size: 40px;
+      }
+      .sub-link{
+        font-size: 20px;
+      }
+
+      @media (max-width: 768px)  {
+        .bg{
+          width: 160px;
+        }
+        
+        a {
+          font-size: 20px;
+        }
+
+        .sub-link{
+          font-size: 14px;
+        }
+      }
+    }
+  
   }
+
+  button {
+    z-index: 999;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 25px;
+    right: 25px;
+    background-color: rgb(170, 170, 170);
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+.pointer-events-stroke {
+  pointer-events: stroke;
 }
