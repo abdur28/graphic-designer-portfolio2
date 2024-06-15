@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import SceneIndex from "../canvas/SceneIndex";
 import { IndexOverlay } from "../dom/IndexOverlay";
 import { Loader } from "../dom/Loader";
-import LCanvas from "../layout/canvas";
+import LCanvas from "../layout/Canvas";
 
 const HomePage = () => {
     const [unmount, setUnmount] = useState(false)

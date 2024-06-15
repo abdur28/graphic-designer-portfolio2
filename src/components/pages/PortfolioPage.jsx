@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react"
 import ProjectsShader from "../canvas/ProjectsShader"
-import StarsCanvas from "../canvas/Stars"
 import LCanvas from "../layout/Canvas"
-import Projects from "../projects/Projects"
 import { CustomLoader } from "../dom/Loader"
 
 

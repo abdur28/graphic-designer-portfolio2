@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import AboutShader from "../canvas/AboutShader";
-import LCanvas from "../layout/canvas";
+import LCanvas from "../layout/Canvas";
 import { CustomLoader } from "../dom/Loader";
 
 const AboutPage = () => {
