@@ -24,6 +24,7 @@ const ProjectsShader = () => {
   const [descWidth, setDescWidth] = useState(1)
   const [isMobile, setIsMobile] = useState(false)
   const [shiftPostion, setShiftPosition] = useState(0.7)
+  const [imageScale, setImageScale] = useState([0.5, 0.5])
 
   const images = [
     {
@@ -73,7 +74,8 @@ const ProjectsShader = () => {
       setShiftPosition(0)
       setPages(7.5)
       setSpacing(-0.5)
-      setDescWidth(0.5)
+      setDescWidth(width / 1.4)
+      setImageScale([0.3, 0.3])
     }
   }, [])
 
@@ -83,13 +85,15 @@ const ProjectsShader = () => {
       setShiftPosition(0)
       setPages(7.5)
       setSpacing(-0.5)
-      setDescWidth(0.5)
+      setDescWidth(width / 1.4)
+      setImageScale([0.3, 0.3])
     } else {
       setIsMobile(false)
       setShiftPosition(0.7)
       setPages(5.5)
       setSpacing(0)
       setDescWidth(1)
+      setImageScale([0.5, 0.5])
     }
   }, [width])
 
@@ -153,7 +157,7 @@ const ProjectsShader = () => {
                   <Plane
                     position={position}
                     rotation={[0, 0, 0]}
-                    args={[0.5, 0.5]}
+                    args={imageScale}
                   >
                     <meshBasicMaterial attach="material" map={texture} />
                   </Plane> 
@@ -162,7 +166,7 @@ const ProjectsShader = () => {
                     position={[-0.4 *position[0], position[1] + spacing, 0.1]}
                     fillOpacity={0.7}
                     font='/FogtwoNo5.otf'
-                    fontSize={0.03}
+                    fontSize={0.025}
                     material-toneMapped={false}
                     anchorX='center'
                     anchorY='middle'
@@ -174,10 +178,10 @@ const ProjectsShader = () => {
                   {/* link to project */}
 
                   <Text
-                    position={[-0.4 * position[0], position[1] + spacing - 0.25, 0.1]}
+                    position={[-0.4 * position[0], position[1] + spacing - 0.2, 0.1]}
                     fillOpacity={1}
                     font='/FogtwoNo5.otf'
-                    fontSize={0.045}
+                    fontSize={0.03}
                     material-toneMapped={false}
                     anchorX='center'
                     anchorY='middle'

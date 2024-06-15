@@ -22,6 +22,7 @@ const AboutShader = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [aboutPosition, setAboutPosition] = useState(-2.2)
   const [pages, setPages] = useState(4)
+  const [imageScale, setImageScale] = useState([0.3, 0.3])
 
   const posY = -0.5
 
@@ -101,7 +102,7 @@ const AboutShader = () => {
             <Plane
               position={[0, -1.5, -0.09]}
               rotation={[0, 0, 0]}
-              args={[0.5, 0.5]}
+              args={imageScale}
             >
               <meshBasicMaterial attach="material" map={texture} />
             </Plane> 
@@ -110,7 +111,7 @@ const AboutShader = () => {
              position={[0, aboutPosition , 0.1]}
              fillOpacity={0.7}
              font='/FogtwoNo5.otf'
-             fontSize={0.03}
+             fontSize={0.025}
              lineHeight={1.3}
              material-toneMapped={false}
              anchorX='center'
